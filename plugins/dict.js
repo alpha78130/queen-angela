@@ -5,8 +5,8 @@ WhatsAsenaDuplicated
 */
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
-/*const got = require('got');
-const fs = require('fs');*/
+const got = require('got');
+const fs = require('fs');
 const axios = require('axios');
 
 const Language = require('../language');
@@ -22,7 +22,7 @@ Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, 
 
 
 
-/*Asena.addCommand({pattern: 'dict ?(.*)', fromMe: false,  dontAddCommandList: true }, async (message, match) => {
+Asena.addCommand({pattern: 'dict ?(.*)', fromMe: false,  dontAddCommandList: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply("Need word to translate");
        if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -57,7 +57,6 @@ Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, 
 		return await message.client.sendMessage(message.jid, "error", MessageType.text);
 	}
 });
-*/
 
 
 
@@ -100,7 +99,7 @@ Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, 
 )
 */
 
-Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
+/*Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
 
     if (!match[1]) return await message.sendMessage(errorMessage("Need word"))
 
@@ -211,7 +210,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dict
 	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
           quoted: message.data,
         })
-	    
+	 */
 
       })
       
