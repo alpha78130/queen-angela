@@ -22,7 +22,7 @@ Asena.addCommand({pattern: 'lngcode', fromMe: false, dontAddCommandList: true}, 
 
 
 
-Asena.addCommand({pattern: 'dict ?(.*)', fromMe: false,  dontAddCommandList: true }, async (message, match) => {
+Asena.addCommand({pattern: 'dict1 ?(.*)', fromMe: false,  dontAddCommandList: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply("Need word to translate");
        if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -60,7 +60,7 @@ Asena.addCommand({pattern: 'dict ?(.*)', fromMe: false,  dontAddCommandList: tru
 
 
 
-/*Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
+Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
     if (!match[1]) return await message.sendMessage(errorMessage("Need word"))
  if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -97,9 +97,8 @@ Asena.addCommand({pattern: 'dict ?(.*)', fromMe: false,  dontAddCommandList: tru
       )}
   },
 )
-*/
 
-/*Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
+Asena.addCommand({ pattern: 'dict2 ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
 
     if (!match[1]) return await message.sendMessage(errorMessage("Need word"))
 
@@ -210,7 +209,7 @@ Asena.addCommand({pattern: 'dict ?(.*)', fromMe: false,  dontAddCommandList: tru
 	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
           quoted: message.data,
         })
-	 */
+	
 
       })
       
